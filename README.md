@@ -33,22 +33,7 @@ WebSocket server
 Browser dashboard
 ```
 
-## Project Structure
 
-```text
-train-frequency-dashboard/
-├── client/
-│   ├── index.html
-│   ├── index.js
-│   └── style.css
-├── middleware/
-│   └── index.js
-├── .env.example
-├── .gitignore
-├── package.json
-├── package-lock.json
-└── README.md
-```
 
 ## Setup
 
@@ -98,17 +83,6 @@ npx serve client
 
 Then open the local address shown in the terminal.
 
-## Available Commands
-
-```bash
-npm run dev
-npm start
-npm run check
-```
-
-## Security
-
-Broker credentials are read from `.env`, which is excluded through `.gitignore`. If credentials were previously included directly in source code or shared in a ZIP file, replace them in HiveMQ before using this version.
 
 ## Author
 
