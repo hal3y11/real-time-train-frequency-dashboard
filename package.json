@@ -1,0 +1,26 @@
+{
+  "name": "train-frequency-dashboard",
+  "version": "1.0.0",
+  "description": "A real-time London Underground train frequency dashboard using MQTT and WebSockets.",
+  "main": "middleware/index.js",
+  "scripts": {
+    "dev": "node middleware/index.js",
+    "start": "node middleware/index.js",
+    "check": "node --check middleware/index.js && node --check client/index.js"
+  },
+  "keywords": [
+    "mqtt",
+    "websocket",
+    "nodejs",
+    "real-time",
+    "london-underground"
+  ],
+  "author": "Heliya Fernando",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mqtt": "^5.13.0",
+    "ws": "^8.18.2"
+  }
+}

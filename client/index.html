@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="A real-time London Underground train frequency dashboard powered by MQTT and WebSockets."
+  />
+  <title>Train Frequency Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Train Frequency Monitor</h1>
+    <p>Subscribe to real-time train data for selected London Underground stations.</p>
+    <p id="connection-status" data-state="connecting" role="status">
+      Connecting to the live data service…
+    </p>
+  </header>
+
+  <main>
+    <section aria-labelledby="controls-heading">
+      <h2 id="controls-heading" class="visually-hidden">Subscription controls</h2>
+
+      <form id="sub-form">
+        <label for="naptan-sub">Subscribe to station:</label>
+        <select id="naptan-sub" name="station" required>
+          <option value="940GZZLUKSX">King's Cross St Pancras</option>
+          <option value="940GZZLURSQ">Russell Square</option>
+          <option value="940GZZLUHBN">Holborn</option>
+          <option value="940GZZLUCGN">Covent Garden</option>
+          <option value="940GZZLULSQ">Leicester Square</option>
+          <option value="940GZZLUPCC">Piccadilly Circus</option>
+        </select>
+        <button type="submit">Subscribe</button>
+      </form>
+
+      <form id="unsub-form">
+        <label for="naptan-unsub">Unsubscribe from station:</label>
+        <select id="naptan-unsub" name="station" required>
+          <option value="940GZZLUKSX">King's Cross St Pancras</option>
+          <option value="940GZZLURSQ">Russell Square</option>
+          <option value="940GZZLUHBN">Holborn</option>
+          <option value="940GZZLUCGN">Covent Garden</option>
+          <option value="940GZZLULSQ">Leicester Square</option>
+          <option value="940GZZLUPCC">Piccadilly Circus</option>
+        </select>
+        <button type="submit" class="secondary-button">Unsubscribe</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading">Station updates</h2>
+      <div id="station-data" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
